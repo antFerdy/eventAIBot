@@ -24,13 +24,23 @@ _JSON_LD_RE = re.compile(
 
 
 def extract_json_ld_blocks(html: str) -> list[dict]:
-    """Return every parseable JSON-LD block found in an HTML page."""
+    """Return every parseable JSON-LD block found in an HTML page.
+
+    A single <script> tag can hold either one JSON-LD object or a JSON
+    array of several (e.g. a place's own info plus a list of Event
+    entries for what it's hosting) — arrays are flattened so every
+    returned item is a dict.
+    """
     blocks = []
     for raw in _JSON_LD_RE.findall(html):
         try:
-            blocks.append(json.loads(raw))
+            parsed = json.loads(raw)
         except json.JSONDecodeError:
             continue
+        if isinstance(parsed, list):
+            blocks.extend(item for item in parsed if isinstance(item, dict))
+        elif isinstance(parsed, dict):
+            blocks.append(parsed)
     return blocks
 
 
@@ -73,7 +83,9 @@ def parse_event(html: str, url: str) -> dict | None:
 
 def parse_place(html: str, url: str) -> dict | None:
     blocks = extract_json_ld_blocks(html)
-    place_block = next((b for b in blocks if b.get("@type") == "LocalBusiness"), None)
+    place_block = next(
+        (b for b in blocks if b.get("@type") in ("LocalBusiness", "Place")), None
+    )
     if place_block is None:
         return None
     article_block = next((b for b in blocks if b.get("@type") == "Article"), None)

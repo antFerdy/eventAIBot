@@ -219,3 +219,21 @@ def test_scrape_all_skips_urls_that_fail_to_fetch(monkeypatch):
     records = scraper.scrape_all(fake_fetch)
     assert len(records) == 1
     assert records[0]["type"] == "place"
+
+
+def test_parse_place_recognizes_place_type_not_just_local_business():
+    html = load_fixture("place_type_place_page.html")
+    record = scraper.parse_place(html, "https://sxodim.com/almaty/place/karaoke-mafia")
+    assert record is not None
+    assert record["type"] == "place"
+    assert record["name"] == "Караоке MAFIA"
+    assert record["category"] == "Караоке"
+
+
+def test_parse_place_ignores_list_shaped_json_ld_block():
+    html = load_fixture("place_with_event_list_page.html")
+    record = scraper.parse_place(
+        html, "https://sxodim.com/almaty/place/mountain-resort-lesnaya-skazka"
+    )
+    assert record is not None
+    assert record["type"] == "place"

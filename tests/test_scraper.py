@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 import scraper
@@ -166,3 +167,55 @@ def test_make_fetcher_gets_url_and_sleeps(monkeypatch):
     assert result == "<html>ok</html>"
     assert session.requested == [("https://sxodim.com/almaty", 10)]
     assert sleep_calls == [0.5]
+
+
+def test_scrape_all_combines_events_and_places(monkeypatch, tmp_path):
+    monkeypatch.setattr(scraper, "PLACE_CATEGORIES", ["cafe"])
+    monkeypatch.setattr(scraper, "EVENT_LISTING_PAGES", 1)
+    monkeypatch.setattr(scraper, "PLACE_CATEGORY_PAGES", 1)
+
+    event_html = load_fixture("event_page.html")
+    place_html = load_fixture("place_page.html")
+
+    def fake_fetch(url):
+        if "afisha" in url:
+            return '<a href="/almaty/event/abzal-uteshovty-koncerti">x</a>'
+        if "/places/cafe" in url:
+            return '<a href="/almaty/place/kofeynya-gastronom">x</a>'
+        if "/event/" in url:
+            return event_html
+        if "/place/" in url:
+            return place_html
+        raise AssertionError(f"unexpected url {url}")
+
+    records = scraper.scrape_all(fake_fetch)
+    assert {r["type"] for r in records} == {"event", "place"}
+    assert len(records) == 2
+
+    output_path = tmp_path / "sxodim_raw.json"
+    scraper.save_raw(records, str(output_path))
+    saved = json.loads(output_path.read_text(encoding="utf-8"))
+    assert saved == records
+
+
+def test_scrape_all_skips_urls_that_fail_to_fetch(monkeypatch):
+    monkeypatch.setattr(scraper, "PLACE_CATEGORIES", ["cafe"])
+    monkeypatch.setattr(scraper, "EVENT_LISTING_PAGES", 1)
+    monkeypatch.setattr(scraper, "PLACE_CATEGORY_PAGES", 1)
+
+    place_html = load_fixture("place_page.html")
+
+    def fake_fetch(url):
+        if "afisha" in url:
+            return '<a href="/almaty/event/broken-event">x</a>'
+        if "/places/cafe" in url:
+            return '<a href="/almaty/place/kofeynya-gastronom">x</a>'
+        if "/event/broken-event" in url:
+            raise scraper.requests.exceptions.HTTPError("404")
+        if "/place/" in url:
+            return place_html
+        raise AssertionError(f"unexpected url {url}")
+
+    records = scraper.scrape_all(fake_fetch)
+    assert len(records) == 1
+    assert records[0]["type"] == "place"

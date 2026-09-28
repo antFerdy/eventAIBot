@@ -127,3 +127,40 @@ def discover_place_urls(fetch_fn) -> list[str]:
             html = fetch_fn(f"{BASE_URL}/almaty/places/{category}?page={page}")
             slugs.update(_PLACE_LINK_RE.findall(html))
     return sorted(f"{BASE_URL}{slug}" for slug in slugs)
+
+
+def scrape_all(fetch_fn) -> list[dict]:
+    """Discover and parse every event and place, skipping any URL that fails."""
+    records = []
+    for url in discover_event_urls(fetch_fn):
+        try:
+            html = fetch_fn(url)
+        except Exception as exc:
+            print(f"skip {url}: {exc}")
+            continue
+        record = parse_event(html, url)
+        if record:
+            records.append(record)
+    for url in discover_place_urls(fetch_fn):
+        try:
+            html = fetch_fn(url)
+        except Exception as exc:
+            print(f"skip {url}: {exc}")
+            continue
+        record = parse_place(html, url)
+        if record:
+            records.append(record)
+    return records
+
+
+def save_raw(records: list[dict], path: str = "sxodim_raw.json") -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(records, f, ensure_ascii=False, indent=2)
+
+
+if __name__ == "__main__":
+    _session = requests.Session()
+    _fetch = make_fetcher(_session)
+    _records = scrape_all(_fetch)
+    save_raw(_records)
+    print(f"Scraped {len(_records)} records -> sxodim_raw.json")

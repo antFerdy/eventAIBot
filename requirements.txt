@@ -1,0 +1,4 @@
+requests
+pytest
+jupyter
+ipykernel

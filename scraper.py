@@ -107,6 +107,18 @@ def discover_event_urls(fetch_fn) -> list[str]:
     return sorted(f"{BASE_URL}{slug}" for slug in slugs)
 
 
+def make_fetcher(session: requests.Session, delay: float = REQUEST_DELAY_SECONDS):
+    """Return a fetch_fn that GETs a URL through `session`, then politely sleeps."""
+
+    def fetch(url: str) -> str:
+        response = session.get(url, timeout=10)
+        response.raise_for_status()
+        time.sleep(delay)
+        return response.text
+
+    return fetch
+
+
 def discover_place_urls(fetch_fn) -> list[str]:
     """Paginate every place category listing and return every unique place detail URL."""
     slugs = set()

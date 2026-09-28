@@ -139,3 +139,30 @@ def test_discover_place_urls_dedupes_across_categories(monkeypatch):
 
     urls = scraper.discover_place_urls(fake_fetch)
     assert urls == [f"{scraper.BASE_URL}/almaty/place/shared-place"]
+
+
+def test_make_fetcher_gets_url_and_sleeps(monkeypatch):
+    sleep_calls = []
+    monkeypatch.setattr(scraper.time, "sleep", lambda s: sleep_calls.append(s))
+
+    class FakeResponse:
+        text = "<html>ok</html>"
+
+        def raise_for_status(self):
+            pass
+
+    class FakeSession:
+        def __init__(self):
+            self.requested = []
+
+        def get(self, url, timeout):
+            self.requested.append((url, timeout))
+            return FakeResponse()
+
+    session = FakeSession()
+    fetch = scraper.make_fetcher(session, delay=0.5)
+    result = fetch("https://sxodim.com/almaty")
+
+    assert result == "<html>ok</html>"
+    assert session.requested == [("https://sxodim.com/almaty", 10)]
+    assert sleep_calls == [0.5]

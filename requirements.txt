@@ -2,3 +2,9 @@ requests
 pytest
 jupyter
 ipykernel
+torch
+transformers
+trl
+peft
+datasets
+accelerate

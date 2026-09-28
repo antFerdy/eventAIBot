@@ -237,3 +237,31 @@ def test_parse_place_ignores_list_shaped_json_ld_block():
     )
     assert record is not None
     assert record["type"] == "place"
+
+
+def test_scrape_all_skips_urls_that_fail_to_parse(monkeypatch):
+    monkeypatch.setattr(scraper, "PLACE_CATEGORIES", ["cafe"])
+    monkeypatch.setattr(scraper, "EVENT_LISTING_PAGES", 1)
+    monkeypatch.setattr(scraper, "PLACE_CATEGORY_PAGES", 1)
+
+    place_html = load_fixture("place_page.html")
+
+    def fake_fetch(url):
+        if "afisha" in url:
+            return '<a href="/almaty/event/unparseable-event">x</a>'
+        if "/places/cafe" in url:
+            return '<a href="/almaty/place/kofeynya-gastronom">x</a>'
+        if "/event/unparseable-event" in url:
+            return "<html>no json-ld here that will explode on purpose</html>"
+        if "/place/" in url:
+            return place_html
+        raise AssertionError(f"unexpected url {url}")
+
+    def exploding_parse_event(html, url):
+        raise ValueError("simulated unexpected page shape")
+
+    monkeypatch.setattr(scraper, "parse_event", exploding_parse_event)
+
+    records = scraper.scrape_all(fake_fetch)
+    assert len(records) == 1
+    assert records[0]["type"] == "place"

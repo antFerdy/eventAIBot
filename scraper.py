@@ -147,19 +147,19 @@ def scrape_all(fetch_fn) -> list[dict]:
     for url in discover_event_urls(fetch_fn):
         try:
             html = fetch_fn(url)
+            record = parse_event(html, url)
         except Exception as exc:
             print(f"skip {url}: {exc}")
             continue
-        record = parse_event(html, url)
         if record:
             records.append(record)
     for url in discover_place_urls(fetch_fn):
         try:
             html = fetch_fn(url)
+            record = parse_place(html, url)
         except Exception as exc:
             print(f"skip {url}: {exc}")
             continue
-        record = parse_place(html, url)
         if record:
             records.append(record)
     return records

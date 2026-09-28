@@ -66,19 +66,6 @@
   },
   {
     "type": "event",
-    "url": "https://sxodim.com/almaty/event/all-stars-jam-session-dzhazovaya-muzyka-i-improvizaciya-6",
-    "name": "All stars jam session – Джазовая музыка и импровизация (28 сентября)",
-    "category": "Концерты в EverJazz",
-    "description": "Джем-сейшн, к которому могут присоединиться все желающие музыканты, кто чувствует, что готов импровизировать.",
-    "address": "Джаз-клуб EverJazz, ул. Жандосова, 1/1",
-    "date_start": "2026-09-28T20:00:00+05:00",
-    "price": 2000,
-    "currency": "KZT",
-    "rating": null,
-    "image": "https://sxodim.com/uploads/posts/2023/12/22/optimized/70a15bbcde15dc0b14eb3c8fc313246b_1522x570-q-85.jpg"
-  },
-  {
-    "type": "event",
     "url": "https://sxodim.com/almaty/event/anime-gik-festival-flavi-fest",
     "name": "Аниме-гик фестиваль Flavi Fest",
     "category": "Фестивали",
@@ -375,19 +362,6 @@
     "currency": "KZT",
     "rating": null,
     "image": "https://sxodim.com/uploads/posts/2024/12/17/optimized/2838ff35b3e95a002267906a233b9374_1522x570-q-85.jpg"
-  },
-  {
-    "type": "event",
-    "url": "https://sxodim.com/almaty/event/kezdeseyik-ta-y-bir-poeziya-keshi",
-    "name": "«Кездесейік тағы бір» поэзия кеші",
-    "category": "Концерты",
-    "description": "«Кездесейік тағы бір» — кеш ой мен жүрек үндесетін, әр сөз жанға жететін рухани кездесу. Бұл кеште поэзия тек оқылып қана қоймай, көрерменмен бірге тыныстайды.",
-    "address": "Барибаев көшесі, 36",
-    "date_start": "2026-09-28T20:00:00+05:00",
-    "price": 5000,
-    "currency": "KZT",
-    "rating": null,
-    "image": "https://sxodim.com/uploads/posts/2026/09/18/optimized/0323cc47f1e629dca0b134fe129bdee5_1522x570-q-85.jpg"
   },
   {
     "type": "event",
@@ -960,19 +934,6 @@
     "currency": "KZT",
     "rating": null,
     "image": "https://sxodim.com/uploads/posts/2026/09/27/optimized/ca32deb8c06f0c97918783246c26b1a1_1522x570-q-85.jpg"
-  },
-  {
-    "type": "event",
-    "url": "https://sxodim.com/almaty/event/stendap-shou-ochen-ochen-mnogo-komikov-by-stand-up-camp-62",
-    "name": "Стендап-шоу «Очень-очень много комиков» (by Stand Up Camp)",
-    "category": "События от Stand Up Camp",
-    "description": "Это большой открытый микрофон, где на одной сцене за вечер может выступить много молодых и начинающих алматинских комиков со своим самым свежим материалом.",
-    "address": "Harats pub, бульвар Бухар Жырау, 26/1",
-    "date_start": "2026-09-28T21:00:00+05:00",
-    "price": 2500,
-    "currency": "KZT",
-    "rating": null,
-    "image": "https://sxodim.com/uploads/posts/2026/09/25/optimized/2c3a65990a5f5e97031e681b01aa6068_1522x570-q-85.jpg"
   },
   {
     "type": "event",
@@ -1843,7 +1804,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -1856,7 +1817,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/13/optimized/9c3716954540505643ff2bf1c0559a17_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -1882,7 +1843,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -1947,7 +1908,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -1960,7 +1921,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/04/optimized/ca674a723d8d21be46670c86d08ae659_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2012,7 +1973,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/03/17/optimized/4dbf1e722e6ccd0501b3d0aa8c5257a3_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2051,7 +2012,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/15/optimized/eef3e0d946254e5954a59af663de3753_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2220,7 +2181,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/19/optimized/91c78667c7ab835a80b3689fc957aa1b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2233,7 +2194,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/13/optimized/bd115dd00f2c1cd97b6794445384dd9a_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2246,7 +2207,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/22/optimized/aa00eb844b89c6d94f7f36e0b6b205a2_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2402,7 +2363,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/e2436912443b215577d80aaaea269fa3_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2415,7 +2376,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/2f7f79a425415a85608dea780da1ffa9_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2428,7 +2389,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/15/optimized/b3998b769ba1e8806ff0e01784c1eb20_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2519,7 +2480,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -2532,7 +2493,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -2545,7 +2506,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/03/13/optimized/2c92a8264b064c4886ddcaa01c056c4c_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2558,7 +2519,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/03/13/optimized/984e7e7b93212ffa8954daa24c7ae425_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2571,7 +2532,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/03/13/optimized/ebe821e92170a9cefdea9bdeaa25a00e_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2584,7 +2545,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/01/26/optimized/3064c39fee57f08b3b0847157021f291_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2597,7 +2558,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -2649,7 +2610,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/06/10/optimized/ab55fe4a9a3a3251c9b53319778e30f8_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2701,7 +2662,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/19/optimized/2b6937f974b75f358b4fe9b8aa19a372_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2740,7 +2701,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/13/optimized/e225832d2ad687d978b8f595a26f03a1_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2766,7 +2727,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2026/09/27/optimized/85f55b62d4285c9faee8a36184fcb4aa_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2779,7 +2740,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/01/25/optimized/720a9378e898d7ee05beff7b996fa1cb_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -2805,7 +2766,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/19/optimized/2b49190ad6caaa466614cd3e8042a2da_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3091,7 +3052,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/13/optimized/bddec439d978a154daa3dc2a030e274c_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3104,7 +3065,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/6c90c5bbd231f5e9d36cdfe5a8588b2b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3117,7 +3078,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/e84cc5234dcd9a9785328f3198033859_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3130,7 +3091,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/20/optimized/85646d265c094200b4ac90d6836060ff_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3156,7 +3117,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -3169,7 +3130,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/29/optimized/59f64d1c069ff805a355df1d993f30c5_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3195,7 +3156,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/01/19/optimized/a8795ed68b5516a8cbaac511016a46ec_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3208,7 +3169,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/20/optimized/8d1dbe1f4f2418742131b16c2755dca6_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3221,7 +3182,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/04/optimized/7de0a2bfeff45ed28fbd4fd10cc44f5d_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3234,7 +3195,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/15/optimized/8ddec03be0cb5f882104f950c230692a_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3247,7 +3208,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/27/optimized/b9515df3fdf40fe5a440785560b54e88_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3286,7 +3247,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/3f4dad1d29796c2fd2a832ac2e5aafdd_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3325,7 +3286,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/08/optimized/3681e07d04a22e1f43a26bd0505c0eb0_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3338,7 +3299,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/08/optimized/62e1db5fdddbe3fb9a2740df71280a80_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3416,7 +3377,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/12/16/optimized/53f57e1b68d1aeedd613276a5ca81320_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3429,7 +3390,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/50468009020abe8729eafbf470e4a37b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3468,7 +3429,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/03/13/optimized/a400406adb696752d5f2fb18ed454ffa_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3481,7 +3442,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/22/optimized/b90bf5997ac178bcf4d60f901684ba35_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3494,7 +3455,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -3533,7 +3494,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/19/optimized/80ac071a30eb71554a1fec96e2009491_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3650,7 +3611,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/06/18/optimized/46578b9fdc15c587007986bdea58c2dd_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3663,7 +3624,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/03/optimized/caf30c89e2b7531fa747416febe8836b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3689,7 +3650,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/13/optimized/26a225ac544862546fa15fce95b0005b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3715,7 +3676,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/03/optimized/0bb6f94b4d6462e2a8bec0e9a8049fcd_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3741,7 +3702,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -3806,7 +3767,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/78dce44323da22125575e3836a348d5e_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -3936,7 +3897,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -3988,7 +3949,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/09/07/optimized/106a7bc4f66fbbb672e46400b9f91d58_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4014,7 +3975,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/03/optimized/26769454fa5bdfa3aa8ad1d5dae90b38_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4105,7 +4066,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4222,7 +4183,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4235,7 +4196,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4248,7 +4209,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4456,7 +4417,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/23/optimized/2c407cddc2c5fa0ee266ae0daeac16fc_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4508,7 +4469,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4586,7 +4547,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4651,7 +4612,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/23/optimized/fedbae9b2f3d368e2ca8c68ba6e66768_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4664,7 +4625,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/04/optimized/19d3162c5911b355564bb1538cd0421f_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4716,7 +4677,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/16/optimized/4593814ae22e21a13066361e86f02b2d_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4729,7 +4690,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4781,7 +4742,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/30/optimized/43ea325e43a1a57723e7a3700b476c13_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4846,7 +4807,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -4872,7 +4833,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/10/31/optimized/f2e5ec4a01e0bfcc2d8691dd35854b8f_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4976,7 +4937,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/7e11b09747d227876cb681146af32222_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -4989,7 +4950,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/03/24/optimized/c3a3b88a3e239d59e8b7eb453b383752_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5002,7 +4963,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/02/01/optimized/43ecf4f1f768009a545ab38be183fbd0_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5015,7 +4976,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/03/optimized/459542ec6626f790c03037294eb011e8_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5054,7 +5015,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/20/optimized/34981f6710d9483b45b4216d90613185_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5067,7 +5028,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/01/13/optimized/6ac2edfa403b4a472a9ab785a730bb48_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5080,7 +5041,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/20/optimized/9936c8d1b11d681df1c986858cb22ddd_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5093,7 +5054,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/02/15/optimized/004830ee08ca4dbc3f82fd689c202ed8_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5132,7 +5093,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/efc83d68b4250e6efe9111fc1bb35841_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5145,7 +5106,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -5158,7 +5119,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/12/optimized/287bc5e38186f6e567572b89e1f8442b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5171,7 +5132,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/27/optimized/df7df8d8ae9b22b27c7bf5ad16417f43_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5184,7 +5145,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/12/27/optimized/1dc1b7872392b6ae42660e17527ce352_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5197,7 +5158,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/10/31/optimized/59e240ae943ade91b164f36c94269dd7_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5210,7 +5171,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/15/optimized/e277d4582df480f96d3d97142acefb50_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5223,7 +5184,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/15/optimized/3b32ab1c9565302c61a1a6c1ec1724d3_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5236,7 +5197,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/02/optimized/ad3b0b403f372b02d9eeabbbc879fa69_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5249,7 +5210,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/27/optimized/0fd14f5fd63a74aaadd4176908f880d9_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5262,7 +5223,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/15/optimized/ee1583349f137c26b70a5fb4cc2e5c65_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5288,7 +5249,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/27/optimized/17215d05ace1a13215525b55f5fab69c_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5301,7 +5262,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2026/08/28/optimized/542a21fa64f36b74a2a58c525238c1d7_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5392,7 +5353,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/02/optimized/e594074f711257115c8d6a52fcc95078_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5405,7 +5366,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/02/optimized/addd86f4fbc28c7217c66622133122f8_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5431,7 +5392,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/14/optimized/d9497cb6aa669f7e23cf7adf7a5a55d3_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5444,7 +5405,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/19/optimized/66f225d1f54d2bc84dd9d2db8c0243f8_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5509,7 +5470,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/19/optimized/c2f81a4c9ef87831f8b7e032da167486_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5535,7 +5496,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/982e23f434238aa330702bb45599beb2_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5626,7 +5587,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -5652,7 +5613,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -5704,7 +5665,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/18/optimized/10a510d6a6db9ac5f64b80e1ae266c51_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5743,7 +5704,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/29/optimized/5dfb1cf2725bd39e0e4280915009dc0b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5860,7 +5821,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/06/17/optimized/819ad157574da6cbb786fd45ab6c665c_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5899,7 +5860,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2025/06/10/optimized/75a0fc217ae34b47110d791dc13d9531_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5912,7 +5873,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/11/optimized/d9e40adf3f0080a09db7a1083152d1a5_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5938,7 +5899,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/a5b33bb700293bd832e5fda520135279_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5951,7 +5912,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/1f5df883e6be4b3357bc681462aca98e_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5964,7 +5925,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/eff0004fc428d8d615b91886e15f4664_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -5977,7 +5938,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6016,7 +5977,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2024/06/18/optimized/df322fa94de688fd0e5f422a6d850a1b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6042,7 +6003,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/08/optimized/3a6e650da0643914f2f9119f0c569c45_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6055,7 +6016,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/02/08/optimized/2e2c6a09c2890a9bcde520b7e3f77348_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6068,7 +6029,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6094,7 +6055,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/21/optimized/6c3c90ff3e25f7688bf280109a6ab5f0_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6146,7 +6107,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/02/22/optimized/4dff51c4f4c6220edadc515f26c55c41_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6289,7 +6250,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6302,7 +6263,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/08/10/optimized/7531c813ec28506cfcc9de5dec80d93e_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6380,7 +6341,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/11/optimized/f8dce7c767e0253e5164531b79915c52_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6393,7 +6354,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6432,7 +6393,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/04/14/optimized/aa50b0e1241819f9feea82fdf0294ae8_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6445,7 +6406,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/11/13/optimized/7f36aa1b85c236890cd4f91459c3e979_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6497,7 +6458,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/01/26/optimized/1f1cb42540f4be0f4761950328686a54_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6510,7 +6471,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/01/26/optimized/18a7aefe339a8802ceb079578b727fd9_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6536,7 +6497,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6575,7 +6536,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6601,7 +6562,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6614,7 +6575,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/04/optimized/9bf18bd7e2a4917bda987d0e39be6352_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6640,7 +6601,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/18/optimized/0e2362748448d8b0cecd5c4631a01b5a_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6744,7 +6705,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/06/01/optimized/85e728fb037e22ce7feb066441420cd6_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6809,7 +6770,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -6822,7 +6783,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/10/18/optimized/dcd68bcac6abe5db9a06f85d98220eac_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6861,7 +6822,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/11/optimized/b48d46b7ef50192231981720a0a56110_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6913,7 +6874,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/18/optimized/a30d6ed75e1ef90346eab6b0a82e9b91_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6926,7 +6887,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/03/24/optimized/aa19ad98b6e54277f8bb30ed4c92faac_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6939,7 +6900,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/30/optimized/602dc8519da7d4f7a4f6c2aa89ba2761_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6952,7 +6913,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/18/optimized/7c767c62fc89f74c74fec7691449481a_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6965,7 +6926,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/18/optimized/2337d789d522f3391cc5b52d729e0559_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6978,7 +6939,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/04/optimized/8fb8a835871fa820c70b89910ce93f26_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -6991,7 +6952,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/04/optimized/44130d68b0e129f912ac50c36901d9b7_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7004,7 +6965,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -7017,7 +6978,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -7030,7 +6991,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/19/optimized/89e70eb3499e1d91748b194721f48881_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7043,7 +7004,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/21/optimized/8c38c44b23f1fc0ba7e67df5414d2982_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7095,7 +7056,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/19/optimized/0c4f2fc8f3d2580c0aceaf10ac669f97_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7173,7 +7134,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/26/optimized/d45af07d59cd447bb4e3f4904514404a_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7225,7 +7186,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/27/optimized/985880bbfe32c49dd743f1c355bdfbad_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7251,7 +7212,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -7264,7 +7225,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/19/optimized/2d130de12a2c6e7abb4e609ee5cdc797_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7277,7 +7238,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/20/optimized/086e4e13532fb847783acaa0332f2e5b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7303,7 +7264,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/02/10/optimized/aa04d3c2850f5804a845ca4daf23d433_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7316,7 +7277,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/02/10/optimized/ca04540cf5b12c6a8b3d31b28a887c9e_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7407,7 +7368,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/02/24/optimized/b263dcec39416b61027e20ad5a316844_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7472,7 +7433,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/08/27/optimized/a6d29f60649648f1662edd2f1398b75f_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7485,7 +7446,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/03/optimized/4376de9cf2c1e136d945d7ca1c317778_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7498,7 +7459,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/04/14/optimized/9a2d3ae442b6f7c0f2afdc11761b7db5_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7511,7 +7472,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/05/22/optimized/551648211a889083f91620d73066c56b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7524,7 +7485,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/20/optimized/41c63063dab80f09dfe9337925c60930_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7537,7 +7498,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/20/optimized/90d4488377c24317d25e824306bfbdb4_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7550,7 +7511,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/07/20/optimized/31bfe4c7767e2fca00dd5a3b6db6b137_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7563,7 +7524,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/06/13/optimized/ff9957ac12f710b1583f3af8d052ea3b_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7602,7 +7563,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -7615,7 +7576,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/11/07/optimized/263190b5d0e36cfb1dd4d8b2cf43a442_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7628,7 +7589,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2022/12/09/optimized/8b2c78c0d97a7142f4ff004fff709aab_1400x790-q-85.jpg"
   },
   {
     "type": "place",
@@ -7641,7 +7602,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/images/sxodim_og.png"
   },
   {
     "type": "place",
@@ -7654,7 +7615,7 @@
     "price": null,
     "currency": null,
     "rating": null,
-    "image": null
+    "image": "https://sxodim.com/uploads/posts/2023/07/03/optimized/720836cae8538b9a185e0c3dcf0f83e7_1400x790-q-85.jpg"
   },
   {
     "type": "place",

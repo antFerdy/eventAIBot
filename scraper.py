@@ -91,6 +91,13 @@ def parse_place(html: str, url: str) -> dict | None:
     article_block = next((b for b in blocks if b.get("@type") == "Article"), None)
     address = (place_block.get("address") or {}).get("streetAddress")
     rating = (place_block.get("aggregateRating") or {}).get("ratingValue")
+    image = place_block.get("image")
+    if isinstance(image, list):
+        image = image[0] if image else None
+    if image is None:
+        article_image = (article_block or {}).get("image")
+        if isinstance(article_image, dict):
+            image = article_image.get("url")
     return {
         "type": "place",
         "url": url,
@@ -102,7 +109,7 @@ def parse_place(html: str, url: str) -> dict | None:
         "price": None,
         "currency": None,
         "rating": rating,
-        "image": place_block.get("image"),
+        "image": image,
     }
 
 
@@ -141,27 +148,45 @@ def discover_place_urls(fetch_fn) -> list[str]:
     return sorted(f"{BASE_URL}{slug}" for slug in slugs)
 
 
+def _scrape_kind(urls, parse_fn, fetch_fn, records):
+    """Fetch+parse every url with parse_fn, appending successes to records.
+
+    Returns (discovered, parsed, skipped) counts. Any fetch or parse
+    failure, or a parse that returns None, counts as skipped and is
+    logged — nothing vanishes without a trace.
+    """
+    parsed = 0
+    skipped = 0
+    for url in urls:
+        try:
+            html = fetch_fn(url)
+            record = parse_fn(html, url)
+        except Exception as exc:
+            print(f"skip {url}: {exc}")
+            skipped += 1
+            continue
+        if record:
+            records.append(record)
+            parsed += 1
+        else:
+            print(f"skip {url}: no parseable record")
+            skipped += 1
+    return len(urls), parsed, skipped
+
+
 def scrape_all(fetch_fn) -> list[dict]:
     """Discover and parse every event and place, skipping any URL that fails."""
     records = []
-    for url in discover_event_urls(fetch_fn):
-        try:
-            html = fetch_fn(url)
-            record = parse_event(html, url)
-        except Exception as exc:
-            print(f"skip {url}: {exc}")
-            continue
-        if record:
-            records.append(record)
-    for url in discover_place_urls(fetch_fn):
-        try:
-            html = fetch_fn(url)
-            record = parse_place(html, url)
-        except Exception as exc:
-            print(f"skip {url}: {exc}")
-            continue
-        if record:
-            records.append(record)
+    event_urls = discover_event_urls(fetch_fn)
+    ev_discovered, ev_parsed, ev_skipped = _scrape_kind(
+        event_urls, parse_event, fetch_fn, records
+    )
+    place_urls = discover_place_urls(fetch_fn)
+    pl_discovered, pl_parsed, pl_skipped = _scrape_kind(
+        place_urls, parse_place, fetch_fn, records
+    )
+    print(f"events: {ev_discovered} discovered, {ev_parsed} parsed, {ev_skipped} skipped")
+    print(f"places: {pl_discovered} discovered, {pl_parsed} parsed, {pl_skipped} skipped")
     return records
 
 

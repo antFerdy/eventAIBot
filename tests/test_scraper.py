@@ -230,6 +230,15 @@ def test_parse_place_recognizes_place_type_not_just_local_business():
     assert record["category"] == "Караоке"
 
 
+def test_parse_place_falls_back_to_article_image_when_place_block_has_none():
+    html = load_fixture("place_type_place_page.html")
+    record = scraper.parse_place(html, "https://sxodim.com/almaty/place/karaoke-mafia")
+    assert record["image"] == (
+        "https://sxodim.com/uploads/posts/2022/09/07/optimized/"
+        "106a7bc4f66fbbb672e46400b9f91d58_1400x790-q-85.jpg"
+    )
+
+
 def test_parse_place_ignores_list_shaped_json_ld_block():
     html = load_fixture("place_with_event_list_page.html")
     record = scraper.parse_place(
@@ -265,3 +274,30 @@ def test_scrape_all_skips_urls_that_fail_to_parse(monkeypatch):
     records = scraper.scrape_all(fake_fetch)
     assert len(records) == 1
     assert records[0]["type"] == "place"
+
+
+def test_scrape_all_logs_skip_and_summary_when_parse_returns_none(monkeypatch, capsys):
+    monkeypatch.setattr(scraper, "PLACE_CATEGORIES", ["cafe"])
+    monkeypatch.setattr(scraper, "EVENT_LISTING_PAGES", 1)
+    monkeypatch.setattr(scraper, "PLACE_CATEGORY_PAGES", 1)
+
+    place_html = load_fixture("place_page.html")
+
+    def fake_fetch(url):
+        if "afisha" in url:
+            return '<a href="/almaty/event/no-event-here">x</a>'
+        if "/places/cafe" in url:
+            return '<a href="/almaty/place/kofeynya-gastronom">x</a>'
+        if "/event/no-event-here" in url:
+            return "<html>this page has no Event JSON-LD on it</html>"
+        if "/place/" in url:
+            return place_html
+        raise AssertionError(f"unexpected url {url}")
+
+    records = scraper.scrape_all(fake_fetch)
+    assert len(records) == 1
+
+    output = capsys.readouterr().out
+    assert "no-event-here" in output
+    assert "events: 1 discovered, 0 parsed, 1 skipped" in output
+    assert "places: 1 discovered, 1 parsed, 0 skipped" in output

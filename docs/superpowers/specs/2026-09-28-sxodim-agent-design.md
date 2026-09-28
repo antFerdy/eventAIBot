@@ -59,15 +59,32 @@ extraction from raw text.
 - HTTP via `requests`, JSON-LD extraction via regex + `json.loads`
   (no BeautifulSoup dependency needed for this specific job, but may use
   it if link discovery gets messy).
-- **Event URL discovery**: crawl listing pages `events/today`,
-  `events/week`, `events/weekend`, plus a date-range query
-  (`events?date_from=...&date_to=...`) covering ~60 days forward, and a
-  few category listings (e.g. `events/kontserty`) for coverage. Dedupe
-  event slugs.
-- **Place URL discovery**: paginate `places?page=N`. Cap at the first
-  **20 pages** (~300-400 places) rather than the full ~119 pages
-  (~2400 places) — documented explicitly in the notebook as a deliberate
-  scope cap for demo runtime, not silent truncation.
+- **Event URL discovery**: paginate `https://sxodim.com/almaty/afisha?page=N`.
+  Verified live: this listing has exactly **9 pages**, `page=10` returns
+  zero results, and the `date_from`/`date_to` query params are ignored by
+  the site (no effect on results) — so no separate `events/week`,
+  `events/weekend`, category listings, or date-range queries are needed.
+  Total: **139 unique events**, all of them (no cap needed — it's already
+  a small, complete set).
+- **Place URL discovery**: the general `places?page=N` listing has **119
+  pages** (~2260 places total) but is dominated by a few categories
+  (verified live: `cafe` alone is 77 pages / ~1223 places, `restaurants`
+  23 pages, `bars` 15 pages) while others are tiny (`dlja-detej` — "for
+  kids" — only 2 pages / ~14 places, `museums` similarly small). Taking
+  the first N pages of the *general* listing would skew heavily toward
+  whatever the default sort surfaces and risks missing small-but-relevant
+  categories entirely — including `dlja-detej`, which directly matters
+  for the required "куда сводить ребёнка" question.
+  Instead: paginate the first **2 pages of each of the 22 category
+  listings** (`places/<category>?page=1,2` — categories are: anticafe,
+  aquapark, bars, beauty-health, biblioteki-, cafe, cinema, coffee-house,
+  countryside, coworkings, dlja-detej, education, entertainment, hotels,
+  karaoke, konditerskaya, museums, parks, prokat-snaryazheniya,
+  recreation, restaurants, theatres), then dedupe by slug. This fully
+  captures small categories and takes a representative slice of large
+  ones instead of an arbitrary sequential cut — expect roughly **500-650
+  unique places** after dedup. Documented explicitly in the notebook as
+  a deliberate, category-balanced scope cap, not silent truncation.
 - Polite delay (~0.3s) between requests.
 - Fetch each event/place detail page, extract the `Event` or
   `LocalBusiness` JSON-LD block + breadcrumb category.
@@ -94,12 +111,19 @@ extraction from raw text.
     "image": "https://..."
   }
   ```
-- For each record, one Ollama call (`qwen2.5-7b-instruct`) with a
-  constrained prompt: given name/category/description, return JSON tags
-  from a **fixed vocabulary** (e.g. `романтика`, `для_детей`, `еда`,
-  `концерт`, `активный_отдых`, `бесплатно`, `новое`, `искусство`,
-  `ночная_жизнь`) — this is the "structure text into events" step
-  required by the ТЗ, layered on top of the JSON-LD structure.
+- Tags come from two sources, not LLM-only:
+  - **Site-derived tags** (free, reliable): the place category slug used
+    to discover the URL (e.g. `dlja-detej` → `для_детей`,
+    `restaurants`/`cafe` → `еда`, event breadcrumb category e.g.
+    "Концерты" → `концерт`) is mapped directly via a small fixed
+    dictionary — no LLM guesswork for things the site already told us.
+  - **LLM-derived tags** (one Ollama call per record, `qwen2.5-7b-instruct`,
+    constrained JSON output): fills in cross-cutting tags the site
+    doesn't label directly and that matter for the ТЗ's example
+    questions — `романтика` (date-spot vibe), `новое` (recently added),
+    `бесплатно` (price == 0 already covers most of this, LLM only for
+    ambiguous cases). This is the "structure text into events" step
+    required by the ТЗ, layered on top of the JSON-LD + category structure.
 - Output: `sxodim_data.json` — the required deliverable.
 
 ### 4.3 Agent (retrieval + generation, no vector DB)
@@ -160,4 +184,6 @@ sxodim_raw.json       — intermediate raw JSON-LD (supporting evidence, not req
 - Live/on-demand scraping per user question.
 - Vector embeddings / vector database / LangChain / LlamaIndex.
 - Paid APIs (OpenAI, Firecrawl).
-- Exhaustive place scraping (full ~2400 places) — capped by design.
+- Exhaustive place scraping (full ~2260 places across 119 general-listing
+  pages, or all of `cafe`'s 77 pages) — capped by design to 2 pages per
+  category instead.

@@ -39,7 +39,9 @@ ANSWER_SYSTEM_PROMPT = """Ты — дружелюбный гид по Алмат
 Тебе дан список подходящих мест и событий в формате JSON. Отвечай ТОЛЬКО на русском, тепло
 и по-человечески. Порекомендуй 2-4 варианта СТРОГО ИЗ ЭТОГО СПИСКА — никогда не придумывай
 места или события от себя. Для каждой рекомендации укажи название, коротко что это, адрес,
-а если есть — дату и цену. Если список пуст, честно скажи, что не нашёл подходящего варианта,
+а если есть — дату и цену. Если у записи цена не указана (price отсутствует или null) —
+НЕ утверждай, что место платное или бесплатное, просто не упоминай цену.
+Если список пуст, честно скажи, что не нашёл подходящего варианта,
 и предложи переформулировать вопрос."""
 
 
@@ -140,12 +142,22 @@ def filter_candidates(data: list[dict], intent: dict, now: datetime, top_n: int 
         if _date_ok(r, date_filter, now) and _price_ok(r, price_max)
     ]
 
+    def match_count(record):
+        return len(intent_tags & set(record["tags"]))
+
     if intent_tags:
-        tag_matches = [r for r in pool if intent_tags & set(r["tags"])]
+        tag_matches = [r for r in pool if match_count(r) > 0]
         if len(tag_matches) >= MIN_TAG_MATCHES:
             pool = tag_matches
 
-    return sorted(pool, key=lambda r: _sort_key(r, date_filter))[:top_n]
+    def key(record):
+        base = _sort_key(record, date_filter)
+        # A record matching more of the requested tags (e.g. both
+        # "активный_отдых" and "бесплатно") should outrank one matching
+        # only one of them, even if the single-match record rates higher.
+        return (-match_count(record), *base) if intent_tags else base
+
+    return sorted(pool, key=key)[:top_n]
 
 
 def generate_answer(question: str, candidates: list[dict], chat_fn) -> str:

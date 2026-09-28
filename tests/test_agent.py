@@ -138,6 +138,22 @@ def test_filter_candidates_ranks_by_rating_not_by_type_when_date_is_not_the_poin
     assert result[0]["name"] == "top-rated-cafe"
 
 
+def test_filter_candidates_ranks_records_matching_more_intent_tags_first():
+    data = [
+        _place("just-active", tags=["активный_отдых"], rating=5),
+        _event(
+            "active-and-free", "2026-10-01T19:00:00+05:00",
+            tags=["активный_отдых", "бесплатно"], price=0,
+        ),
+    ]
+    result = agent.filter_candidates(
+        data,
+        {"date_filter": "any", "intent_tags": ["активный_отдых", "бесплатно"], "price_max": None},
+        now=NOW,
+    )
+    assert result[0]["name"] == "active-and-free"
+
+
 def test_parse_intent_returns_valid_json_from_chat_fn():
     def fake_chat(messages, json_mode=False):
         return json.dumps(

@@ -42,3 +42,53 @@ def extract_breadcrumb_category(html: str) -> str | None:
             if len(items) >= 2:
                 return items[-2].get("name")
     return None
+
+
+def parse_event(html: str, url: str) -> dict | None:
+    event_block = next(
+        (b for b in extract_json_ld_blocks(html) if b.get("@type") == "Event"), None
+    )
+    if event_block is None:
+        return None
+    offers = event_block.get("offers") or {}
+    location = event_block.get("location") or {}
+    address = (location.get("address") or {}).get("streetAddress")
+    image = event_block.get("image")
+    if isinstance(image, list):
+        image = image[0] if image else None
+    return {
+        "type": "event",
+        "url": url,
+        "name": event_block.get("name"),
+        "category": extract_breadcrumb_category(html),
+        "description": event_block.get("description"),
+        "address": address,
+        "date_start": event_block.get("startDate"),
+        "price": offers.get("price"),
+        "currency": offers.get("priceCurrency"),
+        "rating": None,
+        "image": image,
+    }
+
+
+def parse_place(html: str, url: str) -> dict | None:
+    blocks = extract_json_ld_blocks(html)
+    place_block = next((b for b in blocks if b.get("@type") == "LocalBusiness"), None)
+    if place_block is None:
+        return None
+    article_block = next((b for b in blocks if b.get("@type") == "Article"), None)
+    address = (place_block.get("address") or {}).get("streetAddress")
+    rating = (place_block.get("aggregateRating") or {}).get("ratingValue")
+    return {
+        "type": "place",
+        "url": url,
+        "name": place_block.get("name"),
+        "category": extract_breadcrumb_category(html),
+        "description": (article_block or {}).get("description"),
+        "address": address,
+        "date_start": None,
+        "price": None,
+        "currency": None,
+        "rating": rating,
+        "image": place_block.get("image"),
+    }

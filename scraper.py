@@ -92,3 +92,26 @@ def parse_place(html: str, url: str) -> dict | None:
         "rating": rating,
         "image": place_block.get("image"),
     }
+
+
+_EVENT_LINK_RE = re.compile(r"/almaty/event/[a-z0-9-]+")
+_PLACE_LINK_RE = re.compile(r"/almaty/place/[a-z0-9-]+")
+
+
+def discover_event_urls(fetch_fn) -> list[str]:
+    """Paginate the afisha listing and return every unique event detail URL."""
+    slugs = set()
+    for page in range(1, EVENT_LISTING_PAGES + 1):
+        html = fetch_fn(f"{BASE_URL}/almaty/afisha?page={page}")
+        slugs.update(_EVENT_LINK_RE.findall(html))
+    return sorted(f"{BASE_URL}{slug}" for slug in slugs)
+
+
+def discover_place_urls(fetch_fn) -> list[str]:
+    """Paginate every place category listing and return every unique place detail URL."""
+    slugs = set()
+    for category in PLACE_CATEGORIES:
+        for page in range(1, PLACE_CATEGORY_PAGES + 1):
+            html = fetch_fn(f"{BASE_URL}/almaty/places/{category}?page={page}")
+            slugs.update(_PLACE_LINK_RE.findall(html))
+    return sorted(f"{BASE_URL}{slug}" for slug in slugs)

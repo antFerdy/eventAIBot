@@ -100,3 +100,42 @@ def test_parse_place_handles_missing_rating():
     record = scraper.parse_place(html, "https://sxodim.com/almaty/place/new-place")
     assert record["rating"] is None
     assert record["description"] == "A new cafe."
+
+
+def test_discover_event_urls_paginates_and_dedupes():
+    calls = []
+
+    def fake_fetch(url):
+        calls.append(url)
+        page = int(url.rsplit("page=", 1)[1])
+        return f'<a href="/almaty/event/item-{page}">x</a><a href="/almaty/event/item-1">dup</a>'
+
+    urls = scraper.discover_event_urls(fake_fetch)
+    assert len(calls) == scraper.EVENT_LISTING_PAGES
+    assert urls == sorted(
+        f"{scraper.BASE_URL}/almaty/event/item-{p}"
+        for p in range(1, scraper.EVENT_LISTING_PAGES + 1)
+    )
+
+
+def test_discover_place_urls_covers_every_category_and_page():
+    calls = []
+
+    def fake_fetch(url):
+        calls.append(url)
+        return '<a href="/almaty/place/sample-place">x</a>'
+
+    urls = scraper.discover_place_urls(fake_fetch)
+    assert len(calls) == len(scraper.PLACE_CATEGORIES) * scraper.PLACE_CATEGORY_PAGES
+    assert urls == [f"{scraper.BASE_URL}/almaty/place/sample-place"]
+
+
+def test_discover_place_urls_dedupes_across_categories(monkeypatch):
+    monkeypatch.setattr(scraper, "PLACE_CATEGORIES", ["cafe", "restaurants"])
+    monkeypatch.setattr(scraper, "PLACE_CATEGORY_PAGES", 1)
+
+    def fake_fetch(url):
+        return '<a href="/almaty/place/shared-place">x</a>'
+
+    urls = scraper.discover_place_urls(fake_fetch)
+    assert urls == [f"{scraper.BASE_URL}/almaty/place/shared-place"]

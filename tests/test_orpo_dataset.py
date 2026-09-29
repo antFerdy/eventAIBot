@@ -31,6 +31,21 @@ def test_build_messages_includes_question_and_candidate_names():
     assert "kofeynya-x" in user_content
 
 
+def test_build_messages_drops_verbose_fields_not_needed_for_a_recommendation():
+    candidates = [_place("kofeynya-x")]
+    candidates[0]["url"] = "https://sxodim.com/almaty/place/kofeynya-x"
+    candidates[0]["image"] = "https://sxodim.com/uploads/some-very-long-image-url.jpg"
+    candidates[0]["id"] = "place-kofeynya-x"
+
+    messages = orpo_dataset.build_messages("где поесть?", candidates)
+    user_content = messages[-1]["content"]
+
+    # url/image/id are irrelevant to writing a recommendation and just bloat
+    # the training prompt (they made real prompts average ~2300 tokens).
+    assert "sxodim.com" not in user_content
+    assert "image" not in user_content
+
+
 def test_format_example_uses_injected_chat_template_fn():
     captured = {}
 

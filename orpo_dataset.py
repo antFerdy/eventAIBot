@@ -22,8 +22,18 @@ WARM_BOOTSTRAP_PROMPT = """Ты — тёплый, увлечённый гид п
 выбор, и заверши тёплым пожеланием."""
 
 
+_COMPACT_FIELDS = ("name", "category", "address", "date_start", "price", "currency", "rating")
+
+
+def _compact_candidate(record: dict) -> dict:
+    """Keep only the fields a recommendation actually needs. Dropping
+    url/image/id/description/type cut real training prompts from ~2300
+    tokens/example to a fraction of that on MPS."""
+    return {k: record[k] for k in _COMPACT_FIELDS if record.get(k) is not None}
+
+
 def build_messages(question: str, candidates: list[dict]) -> list[dict]:
-    context = json.dumps(candidates, ensure_ascii=False, indent=2)
+    context = json.dumps([_compact_candidate(c) for c in candidates], ensure_ascii=False, indent=2)
     return [
         {"role": "system", "content": DEPLOY_SYSTEM_PROMPT},
         {"role": "user", "content": f"Вопрос: {question}\n\nКандидаты:\n{context}"},

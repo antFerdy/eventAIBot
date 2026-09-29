@@ -7,7 +7,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 import agent
 import orpo_dataset
-from train_orpo import ADAPTER_DIR, BASE_MODEL
+from train_orpo import ADAPTER_DIR, BASE_MODEL, pick_dtype
 
 # Held-out: none of these were in the 30 training questions (orpo_pairs.json).
 HELD_OUT_QUESTIONS = [
@@ -36,8 +36,12 @@ if __name__ == "__main__":
     chat = agent.make_ollama_chat()
     now = datetime.datetime.now().astimezone()
 
+    dtype = pick_dtype(
+        cuda_available=torch.cuda.is_available(),
+        bf16_supported=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
+    )
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
-    model = AutoModelForCausalLM.from_pretrained(BASE_MODEL, torch_dtype=torch.float32)
+    model = AutoModelForCausalLM.from_pretrained(BASE_MODEL, dtype=dtype)
 
     # Resolve retrieval once per question so "before" and "after" answer the
     # exact same prompt -- an Ollama-sampled intent/candidate set could

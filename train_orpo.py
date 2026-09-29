@@ -10,6 +10,16 @@ BASE_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
 ADAPTER_DIR = "orpo_adapter"
 
 
+def pick_dtype(cuda_available: bool, bf16_supported: bool) -> torch.dtype:
+    """CUDA (e.g. a Colab GPU) trains much faster in half precision; MPS/CPU
+    (this project's local machine) stays in float32 for correctness/stability."""
+    if cuda_available and bf16_supported:
+        return torch.bfloat16
+    if cuda_available:
+        return torch.float16
+    return torch.float32
+
+
 def build_dataset(pairs: list[dict], tokenizer) -> Dataset:
     def apply_template(messages):
         return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
@@ -49,8 +59,14 @@ if __name__ == "__main__":
     pairs = orpo_dataset.load_pairs("orpo_pairs.json")
     print(f"Loaded {len(pairs)} training pairs")
 
+    dtype = pick_dtype(
+        cuda_available=torch.cuda.is_available(),
+        bf16_supported=torch.cuda.is_available() and torch.cuda.is_bf16_supported(),
+    )
+    print(f"Using dtype: {dtype}")
+
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
-    model = AutoModelForCausalLM.from_pretrained(BASE_MODEL, torch_dtype=torch.float32)
+    model = AutoModelForCausalLM.from_pretrained(BASE_MODEL, dtype=dtype)
     dataset = build_dataset(pairs, tokenizer)
 
     trainer = ORPOTrainer(
